@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>BR</b> Architects</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="index.html" class="w3-bar-item w3-button">index</a>
+      <a href="java.html" class="w3-bar-item w3-button">java</a>
+      <a href="api.html" class="w3-bar-item w3-button">api</a>
+    </div>
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+
+
+<script>
+  document.getElementById("demo").innerHTML = "hello word";
+</script>
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+<br><h1>The document  Object</h1>
+<p id="demo2">hi</p>
+<button onclick="myfunction()">clikme</button><br><br>
+
+<input type="text" id="number1">
+<button onclick="cal()">100บาท :1 แต้ม</button><br>
+
+  <p id="j">ผลลัพธ์</p>
+<label for="inputText">คำ:</label>
+  
+  <input type="text" id="inputText" />
+  <p id="at">ผลลัพธ์</p>
+  <button onclick="capitalizeFirstLetter()">เปลี่ยนตัวอักษรตัวแรกให้เป็นพิมพ์ใหญ่</button><br><br>
+
+<p>'Maya', 'Marisa', 'Chi'</p>
+<p id="a1">x</p>
+<p id="a2">x</p>
+<p id="a3">x</p>
+<button onclick="lk()">เรียงชื่อเป็นแนวตั้ง</button><br><br>
+
+
+<!-- End page content -->
+</div>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+<!--Java Scrip-->
+<script> 
+    function myfunction(){
+     document.getElementById("demo2").innerHTML ="helloWorld";
+}
+//----------------------------------------------------------------------------
+function cal(){  
+var number1 = parseFloat(document.getElementById('number1').value);
+var j = number1/100;
+document.getElementById('j').innerHTML ='ผลลัพธ์: ' + (Math.floor(j));
+}
+//---------------------------------------------------------------------------
+function capitalizeFirstLetter() {
+  // ดึงค่าจาก input
+  var inputText = document.getElementById('inputText').value;
+  // ตรวจสอบว่ามีข้อมูลที่ป้อนหรือไม่
+  if (!inputText) {
+    alert('กรุณาป้อนคำ');
+    return;
+  }
+  // เปลี่ยนตัวอักษรตัวแรกให้เป็นตัวใหญ่
+  var a = inputText.charAt(0).toUpperCase() + inputText.slice(1);
+  // แสดงผลลัพธ์
+  document.getElementById('at').innerText = 'ผลลัพธ์: ' + a;
+}
+//-----------------------------------------------------------------------
+function lk() {
+  let [first, second, third] = ['Maya', 'Marisa', 'Chi'];
+  document.getElementById('a1').innerText = 'ผลลัพธ์: ' +(first);
+  document.getElementById('a2').innerText = 'ผลลัพธ์: ' +(second);
+  document.getElementById('a3').innerText = 'ผลลัพธ์: ' +(third);
+    }  
+</script>
+
+</body>
+</html>
